@@ -6,34 +6,27 @@
 <title>EDILPA - Église de Dieu Liberté par la Parole</title>
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
-body{background:#0a0a2a;color:#ffffff;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif}
-.header{background:#050520;padding:20px;border-bottom:3px solid #ffd700;position:sticky;top:0;z-index:100}
-.header-content{max-width:1200px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:15px}
+body{background:#0a0a2a;color:#fff;font-family:Arial,sans-serif}
+.header{background:#050520;padding:20px;border-bottom:3px solid #ffd700;position:sticky;top:0}
+.header-content{max-width:1200px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap}
 .logo{font-size:24px;font-weight:bold;color:#ffd700}
-.logo span{font-size:12px;display:block;color:#ffffff}
+.logo span{font-size:12px;display:block;color:#fff}
 .nav{display:flex;flex-wrap:wrap;gap:15px}
-.nav a{color:#ffffff;text-decoration:none;font-size:14px}
+.nav a{color:#fff;text-decoration:none}
 .nav a:hover{color:#ffd700}
-.hero{background:linear-gradient(135deg,#0a0a2a,#1a1a4e);text-align:center;padding:60px 20px}
+.hero{text-align:center;padding:60px 20px;background:linear-gradient(135deg,#0a0a2a,#1a1a4e)}
 .hero h1{font-size:32px;color:#ffd700;margin-bottom:10px}
-.hero p{font-size:16px;color:#dddddd}
 .section-title{text-align:center;font-size:28px;color:#ffd700;margin:50px 0 30px}
 .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:25px;max-width:1200px;margin:0 auto;padding:0 20px}
 .card{background:rgba(255,255,255,0.05);border-radius:15px;padding:20px;text-align:center}
-.card h3{color:#ffd700;margin:15px 0 10px}
-.card p{color:#cccccc;font-size:14px}
-.image-placeholder{background:#1a1a4e;border:2px dashed #ffd700;border-radius:10px;height:180px;display:flex;align-items:center;justify-content:center;color:#ffd700;font-size:14px}
-.ministere-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:20px;max-width:1200px;margin:40px auto;padding:0 20px}
-.ministere-card{background:rgba(255,255,255,0.03);border-radius:15px;padding:20px;text-align:center}
-.ministere-card h3{color:#ffd700;margin:10px 0}
-.footer{background:#050520;padding:30px;text-align:center;margin-top:60px;font-size:14px}
-.footer p{margin:5px 0}
-@media(max-width:768px){
-  .hero h1{font-size:24px}
-  .section-title{font-size:22px}
-  .nav{justify-content:center}
-  .header-content{flex-direction:column}
-}
+.card h3{color:#ffd700;margin:10px 0}
+.image-placeholder{background:#1a1a4e;border:2px dashed #ffd700;border-radius:10px;height:150px;display:flex;align-items:center;justify-content:center}
+.formulaire-section{background:#050520;margin:50px auto;max-width:600px;padding:30px;border-radius:20px}
+.formulaire-section h3{color:#ffd700;text-align:center;margin-bottom:20px}
+input,select,textarea{width:100%;padding:12px;margin:10px 0;border-radius:8px;border:none;background:rgba(255,255,255,0.1);color:#fff}
+.btn{background:#ffd700;color:#0a0a2a;padding:15px;border:none;border-radius:10px;font-weight:bold;cursor:pointer;width:100%}
+.footer{background:#050520;padding:30px;text-align:center;margin-top:40px}
+@media(max-width:768px){.hero h1{font-size:24px}.nav{justify-content:center}}
 </style>
 </head>
 <body>
@@ -42,46 +35,67 @@ body{background:#0a0a2a;color:#ffffff;font-family:-apple-system,BlinkMacSystemFo
 <div class="logo">EDILPA<span>Église de Dieu Liberté par la Parole INC.</span></div>
 <div class="nav">
 <a href="/eglise-edilpa/">Accueil</a>
-<a href="/eglise-edilpa/fondateur.html">Fondateur</a>
-<a href="/eglise-edilpa/histoire.html">Histoire</a>
-<a href="/eglise-edilpa/jeunesse.html">Jeunesse</a>
-<a href="/eglise-edilpa/femmes.html">Femmes</a>
-<a href="/eglise-edilpa/hommes.html">Hommes</a>
-<a href="/eglise-edilpa/louange.html">Louange</a>
-<a href="/eglise-edilpa/missions.html">Missions</a>
-<a href="/eglise-edilpa/evenements.html">Événements</a>
 <a href="/eglise-edilpa/inscription.html">Inscription</a>
+<a href="/eglise-edilpa/jeunesse.html">Jeunesse</a>
+<a href="/eglise-edilpa/evenements.html">Événements</a>
 </div>
 </div>
 </div>
 
 <div class="hero">
 <h1>⛪ Église de Dieu<br>Liberté par la Parole INC.</h1>
-<p>Fondée en 1997 à Santo Domingo, République Dominicaine</p>
-<p>📞 509 3226 6392 | 📧 jeancharies809@gmail.com</p>
-<p>📍 Rue Polyte, Bas-Bourg de Mombin Crochu, Nord'Est, Haïti</p>
+<p>Fondée en 1997 - Santo Domingo | 📞 509 3226 6392</p>
 </div>
 
-<h2 class="section-title">📸 Notre Église en Images</h2>
+<h2 class="section-title">📸 Notre Église</h2>
 <div class="grid">
-<div class="card"><div class="image-placeholder">🖼️ IMAGE 1<br>Assemblée en adoration</div><h3>Adoration</h3><p>Grande assemblée chrétienne</p></div>
-<div class="card"><div class="image-placeholder">🖼️ IMAGE 2<br>Bible ouverte</div><h3>La Parole de Dieu</h3><p>Lumière divine sur l'autel</p></div>
-<div class="card"><div class="image-placeholder">🖼️ IMAGE 3<br>Façade de l'église</div><h3>Notre Temple</h3><p>Rue Polyte, Mombin Crochu</p></div>
-<div class="card"><div class="image-placeholder">🖼️ IMAGE 4<br>Famille chrétienne</div><h3>Famille Unie</h3><p>Unité familiale en Christ</p></div>
+<div class="card"><div class="image-placeholder">🖼️ IMAGE 1</div><h3>Adoration</h3></div>
+<div class="card"><div class="image-placeholder">🖼️ IMAGE 2</div><h3>La Parole</h3></div>
+<div class="card"><div class="image-placeholder">🖼️ IMAGE 3</div><h3>Notre Temple</h3></div>
+<div class="card"><div class="image-placeholder">🖼️ IMAGE 4</div><h3>Famille</h3></div>
 </div>
 
-<h2 class="section-title">✨ Nos Ministères</h2>
-<div class="ministere-grid">
-<div class="ministere-card"><div class="image-placeholder" style="height:100px">🙌</div><h3>Jeunesse</h3><p>Conférence 28 Juin 2026</p></div>
-<div class="ministere-card"><div class="image-placeholder" style="height:100px">👩</div><h3>Femmes</h3><p>Conférences et formations</p></div>
-<div class="ministere-card"><div class="image-placeholder" style="height:100px">👨</div><h3>Hommes</h3><p>Leadership chrétien</p></div>
-<div class="ministere-card"><div class="image-placeholder" style="height:100px">🎵</div><h3>Louange</h3><p>Équipe d'adoration</p></div>
+<!-- FORMULAIRE DIRECTEMENT SUR LA PAGE ACCUEIL -->
+<div class="formulaire-section">
+<h3>📝 INSCRIPTION MEMBRE</h3>
+<form id="form">
+<input type="text" id="nom" placeholder="👤 NOM" required>
+<input type="text" id="prenom" placeholder="👤 PRÉNOM" required>
+<input type="text" id="adresse" placeholder="🏠 ADRESSE" required>
+<select id="etat_civil"><option>💍 ÉTAT CIVIL</option><option>Célibataire</option><option>Marié(e)</option></select>
+<input type="tel" id="telephone" placeholder="📞 TÉLÉPHONE" required>
+<input type="email" id="email" placeholder="📧 EMAIL">
+<input type="text" id="pasteur" placeholder="🙏 PASTEUR">
+<input type="text" id="carte_no" placeholder="🆔 CARTE N°">
+<select id="service"><option>🎯 SERVICE</option><option>Évangélisation</option><option>Louange</option><option>Prière</option></select>
+<textarea id="message" rows="2" placeholder="📝 MESSAGE"></textarea>
+<button type="submit" class="btn">✅ ENVOYER PAR WHATSAPP</button>
+</form>
+<div id="msg" style="margin-top:10px;text-align:center"></div>
 </div>
 
-<div class="footer">
-<p>© 2025 - Église de Dieu Liberté par la Parole INC. (EDILPA)</p>
-<p>📞 509 3226 6392 | 📧 jeancharies809@gmail.com</p>
-<p>📍 Rue Polyte, Bas-Bourg de Mombin Crochu, Nord'Est, Haïti</p>
-</div>
+<div class="footer"><p>📞 509 3226 6392 | 📧 jeancharies809@gmail.com</p><p>📍 Rue Polyte, Mombin Crochu, Haïti</p></div>
+
+<script>
+document.getElementById('form').addEventListener('submit', function(e) {
+e.preventDefault();
+const nom=document.getElementById('nom').value;
+const prenom=document.getElementById('prenom').value;
+const adresse=document.getElementById('adresse').value;
+const etat_civil=document.getElementById('etat_civil').value;
+const telephone=document.getElementById('telephone').value;
+const email=document.getElementById('email').value;
+const pasteur=document.getElementById('pasteur').value;
+const carte_no=document.getElementById('carte_no').value;
+const service=document.getElementById('service').value;
+const message=document.getElementById('message').value;
+if(!nom||!prenom||!adresse||!telephone){alert('Champs obligatoires');return;}
+const texte=`📌 *NOUVELLE INSCRIPTION EDILPA*%0A👤 ${nom} ${prenom}%0A🏠 ${adresse}%0A💍 ${etat_civil}%0A📞 ${telephone}%0A📧 ${email||'Non fourni'}%0A🙏 ${pasteur||'Non fourni'}%0A🆔 ${carte_no||'Non fourni'}%0A🎯 ${service}%0A📝 ${message||'Aucun message'}`;
+window.open(`https://wa.me/50932266392?text=${texte}`,'_blank');
+document.getElementById('form').reset();
+document.getElementById('msg').innerHTML='✅ Message WhatsApp ouvert !';
+setTimeout(()=>document.getElementById('msg').innerHTML='',3000);
+});
+</script>
 </body>
 </html>
