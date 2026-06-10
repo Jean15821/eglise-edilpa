@@ -3,44 +3,58 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>EDILPA - Inscription</title>
+<title>EDILPA - Inscription Membre</title>
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
 body{background:linear-gradient(135deg,#0a0a2a,#1a1a4e);color:white;font-family:Arial,sans-serif}
-.header{background:#0a0a2a;padding:20px;text-align:center}
-.logo{font-size:24px;color:#ffd700}
-.container{max-width:500px;margin:auto;padding:20px}
+.header{background:#0a0a2a;padding:20px;text-align:center;border-bottom:2px solid #ffd700}
+.logo{font-size:20px;color:#ffd700}
+.container{max-width:700px;margin:auto;padding:20px}
 .form-box{background:rgba(255,255,255,0.05);border-radius:20px;padding:30px}
-input,select,textarea{width:100%;padding:12px;margin:10px 0;border-radius:10px;border:none;background:rgba(255,255,255,0.1);color:white}
-label{color:#ffd700;font-weight:bold}
-.btn{background:#ffd700;color:#0a0a2a;padding:15px;border:none;border-radius:10px;font-weight:bold;cursor:pointer;width:100%}
-.footer{text-align:center;padding:20px;background:#050510;margin-top:30px}
-.info{background:rgba(255,215,0,0.1);border-radius:10px;padding:15px;margin-top:20px;text-align:center;font-size:14px}
+h2{text-align:center;color:#ffd700;margin-bottom:25px}
+input,select,textarea{width:100%;padding:12px;margin:10px 0;border-radius:10px;border:none;background:rgba(255,255,255,0.1);color:white;font-size:14px}
+label{color:#ffd700;font-weight:bold;display:block;margin-top:10px}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:15px}
+.btn{background:linear-gradient(135deg,#ffd700,#ff8c00);color:#0a0a2a;padding:16px;border:none;border-radius:10px;font-weight:bold;font-size:18px;cursor:pointer;width:100%;margin-top:20px}
+.footer{text-align:center;padding:30px;background:#050510;margin-top:40px}
+.info{background:rgba(255,215,0,0.1);border-radius:15px;padding:20px;margin-top:25px;text-align:center;font-size:13px}
+.success{background:#00aa00;padding:15px;border-radius:10px;margin-top:20px;text-align:center;display:none}
+.error{background:#ff6600;padding:15px;border-radius:10px;margin-top:20px;text-align:center;display:none}
 </style>
 </head>
 <body>
-<div class="header"><div class="logo">🏛️ ÉGLISE DE DIEU<br>LIBERTÉ PAR LA PAROLE INC.</div></div>
+<div class="header"><div class="logo">🏛️ ÉGLISE DE DIEU LIBERTÉ PAR LA PAROLE INC.<br>✝️ EDILPA ✝️</div></div>
 
 <div class="container">
 <div class="form-box">
-<h2 style="text-align:center;color:#ffd700;margin-bottom:20px">📝 INSCRIPTION MEMBRE</h2>
+<h2>📝 FORMULAIRE D'INSCRIPTION MEMBRE</h2>
 
-<form action="https://formspree.io/f/xgvovqdp" method="POST">
-<input type="hidden" name="_cc" value="walkyjean@gmail.com, jeancharies809@gmail.com, secretaire@edilpa.org">
+<form id="form">
+<input type="hidden" id="destinataires" value="walkyjean@gmail.com,jeancharies809@gmail.com">
 
-<input type="text" name="nom" placeholder="👤 NOM" required>
-<input type="text" name="prenom" placeholder="👤 PRÉNOM" required>
-<input type="text" name="adresse" placeholder="🏠 ADRESSE" required>
-<select name="etat_civil" required><option>💍 ÉTAT CIVIL</option><option>Célibataire</option><option>Marié(e)</option><option>Divorcé(e)</option><option>Veuf/Veuve</option></select>
-<input type="tel" name="telephone" placeholder="📞 TÉLÉPHONE" required>
-<input type="email" name="email" placeholder="📧 EMAIL">
-<input type="text" name="pasteur" placeholder="🙏 PASTEUR RESPONSABLE">
-<input type="text" name="carte_no" placeholder="🆔 CARTE N°">
-<select name="service"><option>🎯 SERVICE SOUHAITÉ</option><option>Évangélisation</option><option>Louange</option><option>Prière</option><option>Jeunesse</option><option>Accueil</option></select>
-<textarea name="message" rows="3" placeholder="📝 MESSAGE"></textarea>
-
+<div class="row">
+<input type="text" id="nom" placeholder="👤 NOM" required>
+<input type="text" id="prenom" placeholder="👤 PRÉNOM" required>
+</div>
+<div class="row">
+<input type="text" id="adresse" placeholder="🏠 ADRESSE" required>
+<select id="etat_civil"><option>💍 ÉTAT CIVIL</option><option>Célibataire</option><option>Marié(e)</option><option>Divorcé(e)</option><option>Veuf/Veuve</option></select>
+</div>
+<div class="row">
+<input type="tel" id="telephone" placeholder="📞 TÉLÉPHONE" required>
+<input type="email" id="email" placeholder="📧 EMAIL">
+</div>
+<div class="row">
+<input type="text" id="pasteur" placeholder="🙏 PASTEUR RESPONSABLE">
+<input type="text" id="carte_no" placeholder="🆔 CARTE N°">
+</div>
+<select id="service"><option>🎯 SERVICE SOUHAITÉ</option><option>Évangélisation</option><option>Louange</option><option>Prière</option><option>Jeunesse</option><option>Accueil</option></select>
+<textarea id="message" rows="3" placeholder="📝 MESSAGE / DEMANDE"></textarea>
 <button type="submit" class="btn">✅ S'INSCRIRE</button>
 </form>
+
+<div id="success" class="success">✅ Inscription envoyée ! Vous recevrez une confirmation.</div>
+<div id="error" class="error">❌ Erreur. Contactez le 509 3226 6392</div>
 
 <div class="info">
 📌 Conférence Jeunesse 2026 : 28 Juin - 8h30 - 2,500 Gdes<br>
@@ -49,6 +63,70 @@ label{color:#ffd700;font-weight:bold}
 </div>
 </div>
 
-<div class="footer"><p>© 2025 - EDILPA</p></div>
+<div class="footer"><p>© 2025 - Église de Dieu Liberté par la Parole INC.</p></div>
+
+<script>
+document.getElementById('form').addEventListener('submit', async function(e) {
+e.preventDefault();
+const successDiv = document.getElementById('success');
+const errorDiv = document.getElementById('error');
+successDiv.style.display = 'none';
+errorDiv.style.display = 'none';
+
+const data = {
+  nom: document.getElementById('nom').value,
+  prenom: document.getElementById('prenom').value,
+  adresse: document.getElementById('adresse').value,
+  etat_civil: document.getElementById('etat_civil').value,
+  telephone: document.getElementById('telephone').value,
+  email: document.getElementById('email').value,
+  pasteur: document.getElementById('pasteur').value,
+  carte_no: document.getElementById('carte_no').value,
+  service: document.getElementById('service').value,
+  message: document.getElementById('message').value,
+  date: new Date().toLocaleString('fr-FR')
+};
+
+try {
+  const response = await fetch('https://api.web3forms.com/submit', {
+    method: 'POST',
+    headers: {'Content-Type': 'application/json'},
+    body: JSON.stringify({
+      access_key: '4e6b6c7a-8f9d-4a2b-8e3c-1f5a7b9d2c4e',
+      subject: '📌 NOUVELLE INSCRIPTION EDILPA',
+      from_name: 'Formulaire EDILPA',
+      to_email: 'walkyjean@gmail.com, jeancharies809@gmail.com',
+      message: `
+📋 NOUVELLE INSCRIPTION MEMBRE
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+👤 NOM: ${data.nom} ${data.prenom}
+🏠 ADRESSE: ${data.adresse}
+💍 ÉTAT CIVIL: ${data.etat_civil}
+📞 TÉLÉPHONE: ${data.telephone}
+📧 EMAIL: ${data.email || 'Non fourni'}
+🙏 PASTEUR: ${data.pasteur || 'Non fourni'}
+🆔 CARTE N°: ${data.carte_no || 'Non fourni'}
+🎯 SERVICE: ${data.service}
+📝 MESSAGE: ${data.message || 'Aucun message'}
+📅 DATE: ${data.date}
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Église de Dieu Liberté par la Parole INC.
+      `
+    })
+  });
+  
+  if(response.ok) {
+    successDiv.style.display = 'block';
+    document.getElementById('form').reset();
+    setTimeout(() => successDiv.style.display = 'none', 5000);
+  } else {
+    throw new Error();
+  }
+} catch(err) {
+  errorDiv.style.display = 'block';
+  setTimeout(() => errorDiv.style.display = 'none', 5000);
+}
+});
+</script>
 </body>
 </html>
