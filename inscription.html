@@ -3,19 +3,27 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>EDILPA - Inscription Membre</title>
+<title>EDILPA - Inscription Complète</title>
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
-body{background:linear-gradient(135deg,#0a0a2a,#1a1a4e);color:white;font-family:Arial,sans-serif}
-.header{background:#0a0a2a;padding:20px;text-align:center}
+body{background:linear-gradient(135deg,#0a0a2a,#1a1a4e);color:#fff;font-family:Arial,sans-serif}
+.header{background:#0a0a2a;padding:20px;text-align:center;border-bottom:3px solid #ffd700}
 .logo{font-size:22px;color:#ffd700}
-.container{max-width:800px;margin:auto;padding:20px}
-.form-box{background:rgba(255,255,255,0.05);border-radius:20px;padding:30px}
-h2{text-align:center;color:#ffd700;margin-bottom:25px}
-input,select,textarea{width:100%;padding:12px;margin:10px 0;border-radius:10px;border:none;background:rgba(255,255,255,0.1);color:white;font-size:14px}
+.container{max-width:850px;margin:auto;padding:20px}
+.form-box{background:rgba(255,255,255,0.05);border-radius:25px;padding:35px}
+h2{text-align:center;color:#ffd700;margin-bottom:10px}
+.sous-titre{text-align:center;margin-bottom:30px;font-size:14px;color:#ccc}
+.section{background:rgba(255,215,0,0.08);border-radius:15px;padding:20px;margin:25px 0}
+.section h3{color:#ffd700;margin-bottom:15px;font-size:18px}
+input,select,textarea{width:100%;padding:12px;margin:10px 0;border-radius:10px;border:none;background:rgba(255,255,255,0.1);color:#fff;font-size:14px}
 .row{display:grid;grid-template-columns:1fr 1fr;gap:15px}
-.btn{background:#ffd700;color:#0a0a2a;padding:15px;border:none;border-radius:10px;font-weight:bold;cursor:pointer;width:100%}
+.checkbox-group{display:flex;flex-wrap:wrap;gap:15px;margin:10px 0}
+.checkbox-group label{display:flex;align-items:center;gap:8px;cursor:pointer}
+.radio-group{display:flex;flex-wrap:wrap;gap:25px;margin:10px 0}
+.radio-group label{display:flex;align-items:center;gap:8px;cursor:pointer}
+.btn{background:#ffd700;color:#0a0a2a;padding:16px;border:none;border-radius:10px;font-weight:bold;font-size:18px;cursor:pointer;width:100%;margin-top:20px}
 .footer{text-align:center;padding:30px;background:#050510;margin-top:40px}
+.pasteur-other{display:none;margin-top:5px}
 </style>
 </head>
 <body>
@@ -24,25 +32,37 @@ input,select,textarea{width:100%;padding:12px;margin:10px 0;border-radius:10px;b
 <div class="container">
 <div class="form-box">
 <h2>📝 FORMULAIRE D'INSCRIPTION</h2>
-<p style="text-align:center;margin-bottom:20px">Tous les champs sont facultatifs</p>
+<p class="sous-titre">Tous les champs sont facultatifs</p>
 
 <form id="form">
+<div class="section">
+<h3>👤 IDENTITÉ</h3>
 <div class="row">
-<input type="text" id="nom" placeholder="👤 NOM">
-<input type="text" id="prenom" placeholder="👤 PRÉNOM">
+<input type="text" id="nom" placeholder="NOM">
+<input type="text" id="prenom" placeholder="PRÉNOM">
 </div>
-<input type="text" id="adresse" placeholder="🏠 ADRESSE">
+<input type="text" id="adresse" placeholder="ADRESSE COMPLÈTE">
 <div class="row">
-<select id="etat_civil"><option>💍 ÉTAT CIVIL</option><option>Célibataire</option><option>Marié(e)</option><option>Divorcé(e)</option><option>Veuf/Veuve</option></select>
-<input type="tel" id="telephone" placeholder="📞 TÉLÉPHONE">
+<select id="etat_civil"><option>ÉTAT CIVIL</option><option>Célibataire</option><option>Marié(e)</option><option>Divorcé(e)</option><option>Veuf/Veuve</option></select>
+<input type="text" id="date_naissance" placeholder="DATE DE NAISSANCE">
 </div>
-<div class="row">
-<input type="email" id="email" placeholder="📧 EMAIL">
-<input type="text" id="carte_no" placeholder="🆔 CARTE N°">
 </div>
 
-<select id="pasteur">
-<option>🙏 PASTEUR RESPONSABLE</option>
+<div class="section">
+<h3>📞 CONTACT</h3>
+<div class="row">
+<input type="tel" id="telephone" placeholder="📱 TÉLÉPHONE PRINCIPAL">
+<input type="tel" id="telephone2" placeholder="📞 TÉLÉPHONE SECOND">
+</div>
+<input type="tel" id="whatsapp" placeholder="💬 WHATSAPP">
+<input type="email" id="email" placeholder="📧 EMAIL">
+</div>
+
+<div class="section">
+<h3>⛪ VIE SPIRITUELLE</h3>
+<select id="pasteur" onchange="showPasteurOther()">
+<option value="">PASTEUR RESPONSABLE</option>
+<option>Apôtre Charles Jean</option>
 <option>Booze Calixte</option>
 <option>Odilna Belizaire</option>
 <option>Jhonny Surlin</option>
@@ -57,20 +77,95 @@ input,select,textarea{width:100%;padding:12px;margin:10px 0;border-radius:10px;b
 <option>Sonthonax</option>
 <option>Esnel B.</option>
 <option>Maxene M.</option>
-<option>Autre pasteur</option>
+<option>AUTRE</option>
 </select>
+<div id="pasteurOther" class="pasteur-other"><input type="text" id="pasteur_autre" placeholder="Écrivez le nom du pasteur"></div>
 
-<select id="service">
-<option>🎯 SERVICE SOUHAITÉ</option>
-<option>Évangélisation</option><option>Louange</option><option>Prière</option>
-<option>Jeunesse</option><option>Femmes</option><option>Hommes</option>
-<option>Accueil</option><option>Technique</option><option>École Biblique</option>
-</select>
+<input type="text" id="carte_no" placeholder="🆔 NUMÉRO DE CARTE MEMBRE">
+<input type="text" id="date_bapteme" placeholder="💧 DATE DE BAPTÊME">
+<input type="text" id="ancienne_eglise" placeholder="⛪ ANCIENNE ÉGLISE">
+</div>
 
-<textarea id="message" rows="3" placeholder="📝 MESSAGE / DEMANDE / TESTIMONAGE"></textarea>
+<div class="section">
+<h3>🎯 DONS SPIRITUELS (plusieurs choix)</h3>
+<div class="checkbox-group">
+<label><input type="checkbox" class="don" value="Chant"> 🎤 Chant</label>
+<label><input type="checkbox" class="don" value="Musique"> 🎹 Musique</label>
+<label><input type="checkbox" class="don" value="Prédication"> 📖 Prédication</label>
+<label><input type="checkbox" class="don" value="Intercession"> 🙏 Intercession</label>
+<label><input type="checkbox" class="don" value="Évangélisation"> 📢 Évangélisation</label>
+<label><input type="checkbox" class="don" value="Enseignement"> 📚 Enseignement</label>
+<label><input type="checkbox" class="don" value="Exhortation"> 💪 Exhortation</label>
+<label><input type="checkbox" class="don" value="Discernement"> 👁️ Discernement</label>
+<label><input type="checkbox" class="don" value="Hospitalité"> 🏠 Hospitalité</label>
+<label><input type="checkbox" class="don" value="Direction"> 🧭 Direction</label>
+</div>
+</div>
+
+<div class="section">
+<h3>🎯 SERVICES SOUHAITÉS (plusieurs choix)</h3>
+<div class="checkbox-group">
+<label><input type="checkbox" class="service" value="Évangélisation"> Évangélisation</label>
+<label><input type="checkbox" class="service" value="Louange"> Louange</label>
+<label><input type="checkbox" class="service" value="Prière"> Prière</label>
+<label><input type="checkbox" class="service" value="Jeunesse"> Jeunesse</label>
+<label><input type="checkbox" class="service" value="Femmes"> Femmes</label>
+<label><input type="checkbox" class="service" value="Hommes"> Hommes</label>
+<label><input type="checkbox" class="service" value="Accueil"> Accueil</label>
+<label><input type="checkbox" class="service" value="Technique"> Technique</label>
+<label><input type="checkbox" class="service" value="École Biblique"> École Biblique</label>
+<label><input type="checkbox" class="service" value="Action Sociale"> Action Sociale</label>
+</div>
+</div>
+
+<div class="section">
+<h3>❤️ AIMEZ-VOUS LE MINISTÈRE EDILPA ?</h3>
+<div class="radio-group">
+<label><input type="radio" name="aime_ministere" value="Oui"> ✅ OUI</label>
+<label><input type="radio" name="aime_ministere" value="Non"> ❌ NON</label>
+</div>
+</div>
+
+<div class="section">
+<h3>🤝 COMMENT VOULEZ-VOUS AIDER LE MINISTÈRE ? (plusieurs choix)</h3>
+<div class="checkbox-group">
+<label><input type="checkbox" class="aide" value="Prière"> 🙏 Prière</label>
+<label><input type="checkbox" class="aide" value="Dons financiers"> 💰 Dons financiers</label>
+<label><input type="checkbox" class="aide" value="Bénévolat"> 🤲 Bénévolat</label>
+<label><input type="checkbox" class="aide" value="Évangélisation"> 📢 Évangélisation</label>
+<label><input type="checkbox" class="aide" value="Enseignement"> 📚 Enseignement</label>
+<label><input type="checkbox" class="aide" value="Louange"> 🎵 Louange</label>
+<label><input type="checkbox" class="aide" value="Technique"> 💻 Technique / Son</label>
+<label><input type="checkbox" class="aide" value="Accueil"> 🚪 Accueil</label>
+<label><input type="checkbox" class="aide" value="Action sociale"> 🍲 Action sociale</label>
+<label><input type="checkbox" class="aide" value="Administration"> 📋 Administration</label>
+<label><input type="checkbox" class="aide" value="Missions"> 🌍 Missions</label>
+</div>
+</div>
+
+<div class="section">
+<h3>🎓 FORMATION & PROFESSION</h3>
+<select id="niveau_etude"><option>NIVEAU D'ÉTUDE</option><option>Aucun</option><option>Primaire</option><option>Secondaire</option><option>Universitaire</option><option>Formation professionnelle</option></select>
+<input type="text" id="profession" placeholder="💼 PROFESSION / MÉTIER">
+</div>
+
+<div class="section">
+<h3>🕊️ RAISON DE CONVERSION</h3>
+<textarea id="raison_conversion" rows="3" placeholder="Racontez comment vous avez donné votre vie à Jésus-Christ..."></textarea>
+</div>
+
+<div class="section">
+<h3>📢 COMMENT AVEZ-VOUS CONNU L'ÉGLISE ?</h3>
+<select id="comment_connu"><option>Sélectionnez</option><option>Invitation d'un membre</option><option>Réseaux sociaux</option><option>Événement / Conférence</option><option>Évangélisation de rue</option><option>Radio / Télévision</option><option>Famille</option><option>Autre</option></select>
+</div>
+
+<div class="section">
+<h3>📝 MESSAGE SPÉCIAL</h3>
+<textarea id="message" rows="3" placeholder="Votre message, témoignage ou demande de prière..."></textarea>
+</div>
 
 <button type="submit" class="btn">✅ ENVOYER PAR WHATSAPP</button>
-<div id="msg" style="margin-top:15px;text-align:center"></div>
+<div id="msg" style="margin-top:15px;text-align:center;color:#ffd700"></div>
 </form>
 </div>
 </div>
@@ -78,32 +173,66 @@ input,select,textarea{width:100%;padding:12px;margin:10px 0;border-radius:10px;b
 <div class="footer"><p>📞 509 3226 6392 | 📧 jeancharies809@gmail.com</p><p>📍 Rue Polyte, Mombin Crochu, Haïti</p></div>
 
 <script>
+function showPasteurOther() {
+var sel = document.getElementById('pasteur');
+var otherDiv = document.getElementById('pasteurOther');
+otherDiv.style.display = (sel.value === 'AUTRE') ? 'block' : 'none';
+}
+
+function getSelectedValues(className) {
+var values = [];
+document.querySelectorAll('.'+className+':checked').forEach(function(cb) { values.push(cb.value); });
+return values.length ? values.join(', ') : 'Non spécifié';
+}
+
+function getRadioValue(name) {
+var selected = document.querySelector('input[name="'+name+'"]:checked');
+return selected ? selected.value : 'Non spécifié';
+}
+
 document.getElementById('form').addEventListener('submit', function(e) {
 e.preventDefault();
-const nom=document.getElementById('nom').value||'Non fourni';
-const prenom=document.getElementById('prenom').value||'Non fourni';
-const adresse=document.getElementById('adresse').value||'Non fourni';
-const etat_civil=document.getElementById('etat_civil').value;
-const telephone=document.getElementById('telephone').value||'Non fourni';
-const email=document.getElementById('email').value||'Non fourni';
-const carte_no=document.getElementById('carte_no').value||'Non fourni';
-const pasteur=document.getElementById('pasteur').value;
-const service=document.getElementById('service').value;
-const message=document.getElementById('message').value||'Aucun message';
-let texte=`📌 *NOUVELLE INSCRIPTION EDILPA*%0A`;
-texte+=`👤 ${nom} ${prenom}%0A`;
-texte+=`🏠 ${adresse}%0A`;
-texte+=`💍 ${etat_civil}%0A`;
-texte+=`📞 ${telephone}%0A`;
-texte+=`📧 ${email}%0A`;
-texte+=`🆔 ${carte_no}%0A`;
-texte+=`🙏 ${pasteur}%0A`;
-texte+=`🎯 ${service}%0A`;
-texte+=`📝 ${message}%0A`;
-texte+=`⛪ Église de Dieu Liberté par la Parole INC.`;
-window.open(`https://wa.me/50932266392?text=${texte}`,'_blank');
+var pasteurVal = document.getElementById('pasteur').value;
+if(pasteurVal === 'AUTRE') pasteurVal = document.getElementById('pasteur_autre').value || 'Autre pasteur';
+
+var message = `📌 *NOUVELLE INSCRIPTION EDILPA*%0A%0A`;
+message += `👤 *IDENTITÉ*%0A`;
+message += `Nom: ${document.getElementById('nom').value||'-'}%0A`;
+message += `Prénom: ${document.getElementById('prenom').value||'-'}%0A`;
+message += `Adresse: ${document.getElementById('adresse').value||'-'}%0A`;
+message += `État civil: ${document.getElementById('etat_civil').value||'-'}%0A`;
+message += `Date naissance: ${document.getElementById('date_naissance').value||'-'}%0A%0A`;
+
+message += `📞 *CONTACT*%0A`;
+message += `Tél principal: ${document.getElementById('telephone').value||'-'}%0A`;
+message += `Tél second: ${document.getElementById('telephone2').value||'-'}%0A`;
+message += `WhatsApp: ${document.getElementById('whatsapp').value||'-'}%0A`;
+message += `Email: ${document.getElementById('email').value||'-'}%0A%0A`;
+
+message += `⛪ *VIE SPIRITUELLE*%0A`;
+message += `Pasteur: ${pasteurVal}%0A`;
+message += `Carte N°: ${document.getElementById('carte_no').value||'-'}%0A`;
+message += `Date baptême: ${document.getElementById('date_bapteme').value||'-'}%0A`;
+message += `Ancienne église: ${document.getElementById('ancienne_eglise').value||'-'}%0A%0A`;
+
+message += `🎯 *Dons spirituels:* ${getSelectedValues('don')}%0A%0A`;
+message += `🎯 *Services souhaités:* ${getSelectedValues('service')}%0A%0A`;
+
+message += `❤️ *Aimez-vous le ministère EDILPA ?* ${getRadioValue('aime_ministere')}%0A%0A`;
+message += `🤝 *Comment voulez-vous aider le ministère ?* ${getSelectedValues('aide')}%0A%0A`;
+
+message += `🎓 *FORMATION*%0A`;
+message += `Niveau étude: ${document.getElementById('niveau_etude').value||'-'}%0A`;
+message += `Profession: ${document.getElementById('profession').value||'-'}%0A%0A`;
+
+message += `🕊️ *Raison conversion:* ${document.getElementById('raison_conversion').value||'-'}%0A%0A`;
+message += `📢 *Connu par:* ${document.getElementById('comment_connu').value||'-'}%0A%0A`;
+message += `📝 *Message:* ${document.getElementById('message').value||'-'}%0A%0A`;
+message += `⛪ Église de Dieu Liberté par la Parole INC.`;
+
+window.open(`https://wa.me/50932266392?text=${message}`,'_blank');
 document.getElementById('msg').innerHTML='✅ Message WhatsApp ouvert !';
-setTimeout(()=>document.getElementById('msg').innerHTML='',3000);
+setTimeout(()=>document.getElementById('msg').innerHTML='',4000);
 });
 </script>
 </body>
