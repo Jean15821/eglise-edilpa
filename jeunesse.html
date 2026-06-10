@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>EDILPA - Ministère de la Jeunesse | Conférence 2026</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:#0a0a2a;color:white;font-family:'Segoe UI',system-ui,sans-serif}
+.header{background:linear-gradient(135deg,#0a0a2a,#1a1a4e);padding:20px;position:sticky;top:0}
+.nav{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;max-width:1200px;margin:0 auto}
+.logo{font-size:24px;font-weight:bold;color:#ffd700}
+.nav-links{display:flex;gap:20px;flex-wrap:wrap}
+.nav-links a{color:white;text-decoration:none}
+.nav-links a:hover{color:#ffd700}
+.page-title{text-align:center;font-size:48px;margin:40px 0;color:#ffd700}
+.container{max-width:1200px;margin:0 auto;padding:20px}
+.event-banner{background:linear-gradient(135deg,#ffd700,#ff8c00);border-radius:30px;padding:40px;text-align:center;color:#0a0a2a;margin-bottom:50px}
+.event-banner h2{font-size:36px;margin-bottom:10px}
+.event-banner .date{font-size:24px;font-weight:bold;margin:15px 0}
+.event-banner .price{font-size:28px;font-weight:800}
+.countdown{display:flex;justify-content:center;gap:20px;margin:30px 0;flex-wrap:wrap}
+.countdown-box{background:#0a0a2a;color:#ffd700;padding:20px;border-radius:15px;text-align:center;min-width:100px}
+.countdown-box .number{font-size:36px;font-weight:bold}
+.image-placeholder{background:linear-gradient(135deg,#1a1a4e,#0a0a2a);border:2px dashed #ffd700;border-radius:20px;height:250px;display:flex;align-items:center;justify-content:center;margin:20px 0}
+.grid-3{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:30px;margin:40px 0}
+.card{background:rgba(255,255,255,0.05);border-radius:20px;padding:20px;text-align:center}
+.footer{background:#050510;padding:40px 20px;text-align:center;margin-top:60px}
+</style>
+</head>
+<body>
+<header class="header">
+<nav class="nav"><div class="logo">EDILPA | Jeunesse</div>
+<div class="nav-links"><a href="/">Accueil</a><a href="/fondateur.html">Fondateur</a><a href="/jeunesse.html">Jeunesse</a><a href="/galerie.html">Galerie</a></div></nav>
+</header>
+
+<h1 class="page-title">🙌 MINISTÈRE DE LA JEUNESSE</h1>
+<div class="container">
+
+<div class="event-banner">
+<h2>🔥 CONFÉRENCE JEUNESSE 2026</h2>
+<p>THÈME : <strong>"Les résultats de la patience et le danger du Désespoir"</strong></p>
+<p class="date">📅 Dimanche 28 Juin 2026 - 8h30 AM</p>
+<p>📍 Rue Polyte, Mombin Crochu, Nord'Est, Haïti</p>
+<p class="price">💰 2,500 Gdes par personne</p>
+<div class="countdown">
+<div class="countdown-box"><div class="number" id="days">00</div><div>Jours</div></div>
+<div class="countdown-box"><div class="number" id="hours">00</div><div>Heures</div></div>
+<div class="countdown-box"><div class="number" id="minutes">00</div><div>Minutes</div></div>
+<div class="countdown-box"><div class="number" id="seconds">00</div><div>Secondes</div></div>
+</div>
+<p style="margin-top:20px"><strong>📞 Réservations : 509 3226 6392</strong></p>
+</div>
+
+<h2 style="color:#ffd700;text-align:center">📸 Galerie Jeunesse</h2>
+<div class="grid-3">
+<div class="card"><div class="image-placeholder" style="height:200px"><p>🖼️ IMAGE 17<br>Étude biblique dynamique</p></div></div>
+<div class="card"><div class="image-placeholder" style="height:200px"><p>🖼️ IMAGE 18<br>Conférence de jeunesse</p></div></div>
+<div class="card"><div class="image-placeholder" style="height:200px"><p>🖼️ IMAGE 19<br>Évangélisation</p></div></div>
+</div>
+</div>
+
+<script>
+function countdown(){const target=new Date('2026-06-28T08:30:00-04:00');setInterval(()=>{const now=new Date();const diff=target-now;if(diff>0){document.getElementById('days').innerText=Math.floor(diff/(1000*60*60*24));document.getElementById('hours').innerText=Math.floor((diff%86400000)/3600000);document.getElementById('minutes').innerText=Math.floor((diff%3600000)/60000);document.getElementById('seconds').innerText=Math.floor((diff%60000)/1000);}else{document.getElementById('days').innerText='0';document.getElementById('hours').innerText='0';document.getElementById('minutes').innerText='0';document.getElementById('seconds').innerText='0';}},1000);}countdown();
+</script>
+<footer class="footer"><p>© 2025 - EDILPA | Conférence Jeunesse 2026</p><p>📞 509 3226 6392 | 📧 jeancharies809@gmail.com</p></footer>
+</body>
+</html>

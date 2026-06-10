@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>EDILPA - Galerie Photos</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:#0a0a2a;color:white;font-family:'Segoe UI',system-ui,sans-serif}
+.header{background:linear-gradient(135deg,#0a0a2a,#1a1a4e);padding:20px;position:sticky;top:0}
+.nav{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;max-width:1200px;margin:0 auto}
+.logo{font-size:24px;font-weight:bold;color:#ffd700}
+.nav-links{display:flex;gap:20px;flex-wrap:wrap}
+.nav-links a{color:white;text-decoration:none}
+.nav-links a:hover{color:#ffd700}
+.page-title{text-align:center;font-size:48px;margin:40px 0;color:#ffd700}
+.container{max-width:1200px;margin:0 auto;padding:20px}
+.gallery-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:25px;margin:40px 0}
+.gallery-item{background:rgba(255,255,255,0.03);border-radius:15px;overflow:hidden;transition:transform 0.3s}
+.gallery-item:hover{transform:scale(1.02)}
+.image-placeholder{background:linear-gradient(135deg,#1a1a4e,#0a0a2a);border-bottom:2px solid #ffd700;height:220px;display:flex;align-items:center;justify-content:center;text-align:center}
+.gallery-item p{padding:15px;text-align:center}
+.section-title{text-align:center;font-size:28px;margin:50px 0 20px;color:#ffd700;border-bottom:1px solid rgba(255,215,0,0.3);display:inline-block;width:auto}
+.title-center{text-align:center}
+.footer{background:#050510;padding:40px 20px;text-align:center;margin-top:60px}
+</style>
+</head>
+<body>
+<header class="header">
+<nav class="nav"><div class="logo">EDILPA | Galerie</div>
+<div class="nav-links"><a href="/">Accueil</a><a href="/fondateur.html">Fondateur</a><a href="/jeunesse.html">Jeunesse</a><a href="/galerie.html">Galerie</a></div></nav>
+</header>
+
+<h1 class="page-title">📸 Galerie Photos</h1>
+<div class="container">
+
+<div class="title-center"><h2 class="section-title">🙌 Cultes & Adoration</h2></div>
+<div class="gallery-grid">
+<div class="gallery-item"><div class="image-placeholder"><p>🎬 Culte dominical</p></div><p>Assemblée en adoration</p></div>
+<div class="gallery-item"><div class="image-placeholder"><p>🎬 Équipe de louange</p></div><p>Ministère de louange</p></div>
+<div class="gallery-item"><div class="image-placeholder"><p>🎬 Prière collective</p></div><p>Intercession</p></div>
+</div>
+
+<div class="title-center"><h2 class="section-title">💧 Baptêmes</h2></div>
+<div class="gallery-grid">
+<div class="gallery-item"><div class="image-placeholder"><p>💧 Cérémonie de baptême</p></div><p>Baptême dans les eaux</p></div>
+<div class="gallery-item"><div class="image-placeholder"><p>💧 Joie du baptême</p></div><p>Nouvelle naissance</p></div>
+</div>
+
+<div class="title-center"><h2 class="section-title">💍 Mariages Chrétiens</h2></div>
+<div class="gallery-grid">
+<div class="gallery-item"><div class="image-placeholder"><p>💍 Cérémonie de mariage</p></div><p>Union chrétienne</p></div>
+<div class="gallery-item"><div class="image-placeholder"><p>💍 Présentation d'enfants</p></div><p>Dédicace</p></div>
+</div>
+
+<div class="title-center"><h2 class="section-title">👨‍👩‍👧‍👦 Familles & Enfants</h2></div>
+<div class="gallery-grid">
+<div class="gallery-item"><div class="image-placeholder"><p>👨‍👩‍👧 École du dimanche</p></div><p>Enfants apprenant la Bible</p></div>
+<div class="gallery-item"><div class="image-placeholder"><p>👨‍👩‍👧 Familles chrétiennes</p></div><p>Unité familiale en Christ</p></div>
+</div>
+
+<div class="title-center"><h2 class="section-title">📖 Formations & Séminaires</h2></div>
+<div class="gallery-grid">
+<div class="gallery-item"><div class="image-placeholder"><p>📖 École biblique</p></div><p>Formation théologique</p></div>
+<div class="gallery-item"><div class="image-placeholder"><p>📖 Séminaire de leadership</p></div><p>Formation des leaders</p></div>
+</div>
+
+<div class="title-center"><h2 class="section-title">❤️ Actions Sociales</h2></div>
+<div class="gallery-grid">
+<div class="gallery-item"><div class="image-placeholder"><p>❤️ Distribution alimentaire</p></div><p>Aide aux familles</p></div>
+<div class="gallery-item"><div class="image-placeholder"><p>❤️ Visite aux malades</p></div><p>Compassion chrétienne</p></div>
+</div>
+
+<div class="title-center"><h2 class="section-title">🎤 Événements Spéciaux</h2></div>
+<div class="gallery-grid">
+<div class="gallery-item"><div class="image-placeholder"><p>🎤 Conférence Jeunesse</p></div><p>Événement 2026</p></div>
+<div class="gallery-item"><div class="image-placeholder"><p>🎤 Convention annuelle</p></div><p>Rassemblement général</p></div>
+<div class="gallery-item"><div class="image-placeholder"><p>🎤 Concert de louange</p></div><p>Adoration publique</p></div>
+</div>
+</div>
+<footer class="footer"><p>© 2025 - Église de Dieu Liberté par la Parole INC.</p><p>📞 509 3226 6392 | 📧 jeancharies809@gmail.com</p><p>📍 Bas-Bourg de Mombin Crochu, Rue Polyte, Nord'Est, Haïti</p></footer>
+</body>
+</html>
