@@ -3,224 +3,52 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>EDILPA - Inscription des Membres | Formulaire officiel</title>
+<title>EDILPA - Inscription</title>
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
-body{background:linear-gradient(135deg,#0a0a2a 0%,#1a1a4e 100%);color:white;font-family:'Segoe UI',system-ui,sans-serif}
-.header{background:linear-gradient(135deg,#0a0a2a,#1a1a4e);padding:20px;position:sticky;top:0;z-index:100}
-.nav{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;max-width:1200px;margin:0 auto}
-.logo{font-size:24px;font-weight:bold;color:#ffd700}
-.nav-links{display:flex;gap:20px;flex-wrap:wrap}
-.nav-links a{color:white;text-decoration:none}
-.nav-links a:hover{color:#ffd700}
-.page-title{text-align:center;font-size:42px;margin:40px 0 10px;color:#ffd700}
-.sous-titre{text-align:center;margin-bottom:40px;color:#ccc}
-.container{max-width:900px;margin:0 auto;padding:20px}
-.form-box{background:rgba(255,255,255,0.05);border-radius:30px;padding:40px;backdrop-filter:blur(10px);border:1px solid rgba(255,215,0,0.2)}
-.form-group{margin-bottom:20px}
-label{display:block;margin-bottom:8px;color:#ffd700;font-weight:bold}
-input,select,textarea{width:100%;padding:15px;border-radius:10px;border:none;background:rgba(255,255,255,0.1);color:white;font-size:16px}
-input:focus,select:focus,textarea:focus{outline:2px solid #ffd700}
-input::placeholder,textarea::placeholder{color:rgba(255,255,255,0.5)}
-select option{background:#0a0a2a}
-.row{display:grid;grid-template-columns:1fr 1fr;gap:20px}
-.row-3{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
-.btn{background:linear-gradient(135deg,#ffd700,#ff8c00);color:#0a0a2a;padding:18px;border:none;border-radius:10px;font-size:18px;font-weight:bold;cursor:pointer;width:100%;margin-top:20px;transition:0.3s}
-.btn:hover{transform:scale(1.02);box-shadow:0 10px 20px rgba(0,0,0,0.3)}
-.info-eglise{background:linear-gradient(135deg,rgba(255,215,0,0.1),rgba(255,215,0,0.05));border-radius:20px;padding:25px;margin-bottom:30px;text-align:center;border:1px solid rgba(255,215,0,0.3)}
-.info-eglise h3{color:#ffd700;margin-bottom:10px}
-.footer{background:#050510;padding:40px 20px;text-align:center;margin-top:60px}
-.required{color:#ff6600;font-size:12px}
-hr{border-color:rgba(255,215,0,0.2);margin:20px 0}
-@media(max-width:768px){.row,.row-3{grid-template-columns:1fr}}
+body{background:linear-gradient(135deg,#0a0a2a,#1a1a4e);color:white;font-family:Arial,sans-serif}
+.header{background:#0a0a2a;padding:20px;text-align:center}
+.logo{font-size:24px;color:#ffd700}
+.container{max-width:500px;margin:auto;padding:20px}
+.form-box{background:rgba(255,255,255,0.05);border-radius:20px;padding:30px}
+input,select,textarea{width:100%;padding:12px;margin:10px 0;border-radius:10px;border:none;background:rgba(255,255,255,0.1);color:white}
+label{color:#ffd700;font-weight:bold}
+.btn{background:#ffd700;color:#0a0a2a;padding:15px;border:none;border-radius:10px;font-weight:bold;cursor:pointer;width:100%}
+.footer{text-align:center;padding:20px;background:#050510;margin-top:30px}
+.info{background:rgba(255,215,0,0.1);border-radius:10px;padding:15px;margin-top:20px;text-align:center;font-size:14px}
 </style>
 </head>
 <body>
-<header class="header">
-<nav class="nav"><div class="logo">EDILPA | Inscription Membre</div>
-<div class="nav-links"><a href="/">Accueil</a><a href="/inscription.html">Inscription</a><a href="/jeunesse.html">Conférence</a><a href="/galerie.html">Galerie</a></div></nav>
-</header>
+<div class="header"><div class="logo">🏛️ ÉGLISE DE DIEU<br>LIBERTÉ PAR LA PAROLE INC.</div></div>
 
 <div class="container">
-<div class="info-eglise">
-<h3>🏛️ ÉGLISE DE DIEU LIBERTÉ PAR LA PAROLE INC. (EDILPA)</h3>
-<p>Fondée en 1997 - Siège: Rue Polyte, Mombin Crochu, Nord'Est, Haïti</p>
-<p>📞 509 3226 6392 | 📧 jeancharies809@gmail.com</p>
-</div>
-
-<h1 class="page-title">📝 FORMULAIRE D'INSCRIPTION</h1>
-<p class="sous-titre">Devenir membre officiel de l'Église de Dieu Liberté par la Parole INC.</p>
-
 <div class="form-box">
-<form id="inscriptionForm">
+<h2 style="text-align:center;color:#ffd700;margin-bottom:20px">📝 INSCRIPTION MEMBRE</h2>
 
-<div class="info-eglise" style="margin-bottom:20px;background:rgba(255,215,0,0.05)">
-<h3>📌 INFORMATIONS PERSONNELLES</h3>
-</div>
+<form action="https://formspree.io/f/xgvovqdp" method="POST">
+<input type="hidden" name="_cc" value="walkyjean@gmail.com, jeancharies809@gmail.com, secretaire@edilpa.org">
 
-<div class="row">
-<div class="form-group"><label>👤 Nom *</label><input type="text" id="nom" required placeholder="Votre nom de famille"><span class="required">Obligatoire</span></div>
-<div class="form-group"><label>👤 Prénom *</label><input type="text" id="prenom" required placeholder="Votre prénom"><span class="required">Obligatoire</span></div>
-</div>
+<input type="text" name="nom" placeholder="👤 NOM" required>
+<input type="text" name="prenom" placeholder="👤 PRÉNOM" required>
+<input type="text" name="adresse" placeholder="🏠 ADRESSE" required>
+<select name="etat_civil" required><option>💍 ÉTAT CIVIL</option><option>Célibataire</option><option>Marié(e)</option><option>Divorcé(e)</option><option>Veuf/Veuve</option></select>
+<input type="tel" name="telephone" placeholder="📞 TÉLÉPHONE" required>
+<input type="email" name="email" placeholder="📧 EMAIL">
+<input type="text" name="pasteur" placeholder="🙏 PASTEUR RESPONSABLE">
+<input type="text" name="carte_no" placeholder="🆔 CARTE N°">
+<select name="service"><option>🎯 SERVICE SOUHAITÉ</option><option>Évangélisation</option><option>Louange</option><option>Prière</option><option>Jeunesse</option><option>Accueil</option></select>
+<textarea name="message" rows="3" placeholder="📝 MESSAGE"></textarea>
 
-<div class="row">
-<div class="form-group"><label>📅 Date de naissance</label><input type="date" id="date_naissance"></div>
-<div class="form-group"><label>📍 Lieu de naissance</label><input type="text" id="lieu_naissance" placeholder="Ville, département"></div>
-</div>
-
-<div class="row">
-<div class="form-group"><label>🏠 Adresse complète *</label><input type="text" id="adresse" required placeholder="Rue, numéro, quartier, commune"><span class="required">Obligatoire</span></div>
-<div class="form-group"><label>🌆 Ville/Commune</label><input type="text" id="ville" placeholder="Mombin Crochu, etc."></div>
-</div>
-
-<div class="row">
-<div class="form-group"><label>💍 État civil</label><select id="etat_civil"><option value="walkyjean@gmail.com, jeancharies809@gmail.com, secretaire@edilpa.org">Sélectionnez</option><option>Marié(e)</option><option>Célibataire</option><option>Divorcé(e)</option><option>Veuf/Veuve</option><option>Union libre</option></select></div>
-<div class="form-group"><label>👶 Nombre d'enfants</label><select id="nb_enfants"><option value="walkyjean@gmail.com, jeancharies809@gmail.com, secretaire@edilpa.org">0</option><option>1</option><option>2</option><option>3</option><option>4</option><option>5+</option></select></div>
-</div>
-
-<div class="row">
-<div class="form-group"><label>🇭🇹 Nationalité</label><input type="text" id="nationalite" placeholder="Haïtienne, Dominicaine, etc."></div>
-<div class="form-group"><label>🆔 Carte d'identité / NIF</label><input type="text" id="carte_id" placeholder="Numéro de pièce d'identité"></div>
-</div>
-
-<div class="info-eglise" style="margin-bottom:20px;margin-top:20px;background:rgba(255,215,0,0.05)">
-<h3>📞 CONTACT ET COMMUNICATION</h3>
-</div>
-
-<div class="row">
-<div class="form-group"><label>📞 Téléphone principal *</label><input type="tel" id="telephone" required placeholder="509 XX XX XX XX"><span class="required">Obligatoire</span></div>
-<div class="form-group"><label>📞 Téléphone secondaire</label><input type="tel" id="telephone2" placeholder="509 XX XX XX XX"></div>
-</div>
-
-<div class="row">
-<div class="form-group"><label>📧 Email</label><input type="email" id="email" placeholder="exemple@email.com"></div>
-<div class="form-group"><label>💬 WhatsApp</label><input type="tel" id="whatsapp" placeholder="509 XX XX XX XX"></div>
-</div>
-
-<div class="info-eglise" style="margin-bottom:20px;margin-top:20px;background:rgba(255,215,0,0.05)">
-<h3>⛪ INFORMATIONS ECCLÉSIASTIQUES</h3>
-</div>
-
-<div class="row">
-<div class="form-group"><label>🙏 Pasteur responsable</label><select id="pasteur"><option value="walkyjean@gmail.com, jeancharies809@gmail.com, secretaire@edilpa.org">Sélectionnez votre pasteur</option><option>Apôtre Charles Jean</option><option>Pasteur Erick Zidor</option><option>Autre pasteur EDILPA</option></select></div>
-<div class="form-group"><label>📅 Date de baptême</label><input type="date" id="date_bapteme"></div>
-</div>
-
-<div class="row">
-<div class="form-group"><label>🕊️ Dernière église d'attache</label><input type="text" id="ancienne_eglise" placeholder="Nom de l'église précédente"></div>
-<div class="form-group"><label>⏳ Ancienneté chrétienne</label><select id="anciennete"><option value="walkyjean@gmail.com, jeancharies809@gmail.com, secretaire@edilpa.org">Sélectionnez</option><option>Moins d'1 an</option><option>1-3 ans</option><option>3-5 ans</option><option>5-10 ans</option><option>Plus de 10 ans</option></select></div>
-</div>
-
-<div class="row">
-<div class="form-group"><label>🎯 Service / Département souhaité</label><select id="service"><option value="walkyjean@gmail.com, jeancharies809@gmail.com, secretaire@edilpa.org">Sélectionnez</option><option>Évangélisation</option><option>Louange / Chorale</option><option>Prière / Intercession</option><option>Jeunesse</option><option>Femmes</option><option>Hommes</option><option>Technique / Sonorisation</option><option>Accueil / Usher</option><option>Formation / École biblique</option><option>Mission</option><option>Action sociale / Humanitaire</option><option>Enfants / École du dimanche</option><option>Administration / Comptabilité</option></select></div>
-<div class="form-group"><label>🎤 Talent ou don spirituel</label><input type="text" id="don" placeholder="Chant, musique, prédication, etc."></div>
-</div>
-
-<div class="form-group"><label>📖 Formation biblique suivie</label><textarea id="formation" rows="2" placeholder="Citez les formations, séminaires ou écoles bibliques que vous avez suivis"></textarea></div>
-
-<div class="info-eglise" style="margin-bottom:20px;margin-top:20px;background:rgba(255,215,0,0.05)">
-<h3>💒 SITUATION FAMILIALE ET SOCIALE</h3>
-</div>
-
-<div class="row">
-<div class="form-group"><label>💼 Profession / Métier</label><input type="text" id="profession" placeholder="Votre profession"></div>
-<div class="form-group"><label>🏫 Niveau d'étude</label><select id="etude"><option value="walkyjean@gmail.com, jeancharies809@gmail.com, secretaire@edilpa.org">Sélectionnez</option><option>Primaire</option><option>Secondaire</option><option>Universitaire</option><option>Formation professionnelle</option></select></div>
-</div>
-
-<div class="row">
-<div class="form-group"><label>👨‍👩‍👧 Votre conjoint(e) (nom)</label><input type="text" id="conjoint" placeholder="Si marié(e)"></div>
-<div class="form-group"><label>📞 Téléphone conjoint(e)</label><input type="tel" id="tel_conjoint" placeholder="Téléphone du conjoint"></div>
-</div>
-
-<div class="info-eglise" style="margin-bottom:20px;margin-top:20px;background:rgba(255,215,0,0.05)">
-<h3>📝 AUTRES INFORMATIONS</h3>
-</div>
-
-<div class="form-group"><label>📌 Comment avez-vous connu l'église ?</label><select id="comment_connu"><option value="walkyjean@gmail.com, jeancharies809@gmail.com, secretaire@edilpa.org">Sélectionnez</option><option>Invitation d'un membre</option><option>Réseaux sociaux</option><option>Événement / Conférence</option><option>Radio / Télévision</option><option>Évangélisation de rue</option><option>Autre</option></select></div>
-
-<div class="form-group"><label>🙏 Message ou demande spéciale</label><textarea id="message" rows="4" placeholder="Partagez votre témoignage, vos besoins ou votre vision..."></textarea></div>
-
-<hr>
-
-<div class="row">
-<div class="form-group"><label>🔑 Mot de passe (accès espace membre)</label><input type="password" id="password" placeholder="Créez un mot de passe"></div>
-<div class="form-group"><label>🔑 Confirmer mot de passe</label><input type="password" id="confirm_password" placeholder="Répétez le mot de passe"></div>
-</div>
-
-<div class="form-group">
-<label><input type="checkbox" id="accord" required> J'accepte les statuts et la charte de l'Église de Dieu Liberté par la Parole INC. *</label>
-</div>
-
-<button type="submit" class="btn">✅ S'INSCRIRE MAINTENANT</button>
-<div id="messageRetour" style="margin-top:20px;text-align:center;font-weight:bold"></div>
+<button type="submit" class="btn">✅ S'INSCRIRE</button>
 </form>
-</div>
 
-<div class="info-eglise" style="margin-top:30px">
-<h3>📌 INFORMATIONS COMPLÉMENTAIRES</h3>
-<p><strong>Conférence Jeunesse 2026</strong> : 28 Juin 2026 - 8h30 - 2,500 Gdes</p>
-<p><strong>📞 Contact :</strong> 509 3226 6392 | <strong>📧 Email :</strong> jeancharies809@gmail.com</p>
-<p><strong>📍 Adresse :</strong> Rue Polyte, Bas-Bourg de Mombin Crochu, Nord'Est, Haïti</p>
+<div class="info">
+📌 Conférence Jeunesse 2026 : 28 Juin - 8h30 - 2,500 Gdes<br>
+📞 509 3226 6392 | 📧 jeancharies809@gmail.com
 </div>
 </div>
+</div>
 
-<footer class="footer"><p>© 2025 - Église de Dieu Liberté par la Parole INC. (EDILPA)</p><p>Tous droits réservés</p></footer>
-
-<script>
-document.getElementById('inscriptionForm').addEventListener('submit', async function(e) {
-e.preventDefault();
-if(document.getElementById('password').value !== document.getElementById('confirm_password').value) {
-document.getElementById('messageRetour').innerHTML = '❌ Les mots de passe ne correspondent pas !';
-document.getElementById('messageRetour').style.color = '#ff6600';
-return;
-}
-const data = {
-nom:document.getElementById('nom').value,
-prenom:document.getElementById('prenom').value,
-date_naissance:document.getElementById('date_naissance').value,
-lieu_naissance:document.getElementById('lieu_naissance').value,
-adresse:document.getElementById('adresse').value,
-ville:document.getElementById('ville').value,
-etat_civil:document.getElementById('etat_civil').value,
-nb_enfants:document.getElementById('nb_enfants').value,
-nationalite:document.getElementById('nationalite').value,
-carte_id:document.getElementById('carte_id').value,
-telephone:document.getElementById('telephone').value,
-telephone2:document.getElementById('telephone2').value,
-email:document.getElementById('email').value,
-whatsapp:document.getElementById('whatsapp').value,
-pasteur:document.getElementById('pasteur').value,
-date_bapteme:document.getElementById('date_bapteme').value,
-ancienne_eglise:document.getElementById('ancienne_eglise').value,
-anciennete:document.getElementById('anciennete').value,
-service:document.getElementById('service').value,
-don:document.getElementById('don').value,
-formation:document.getElementById('formation').value,
-profession:document.getElementById('profession').value,
-etude:document.getElementById('etude').value,
-conjoint:document.getElementById('conjoint').value,
-tel_conjoint:document.getElementById('tel_conjoint').value,
-comment_connu:document.getElementById('comment_connu').value,
-message:document.getElementById('message').value,
-password:document.getElementById('password').value,
-accord:document.getElementById('accord').checked
-};
-const retour = document.getElementById('messageRetour');
-retour.innerHTML = '📤 Envoi de votre inscription en cours...';
-retour.style.color = '#ffd700';
-try {
-const response = await fetch('https://formspree.io/f/xgvovqdp', {method:'POST', headers:{'Content-Type':'application/json'}, body:JSON.stringify(data)});
-if(response.ok) {
-retour.innerHTML = '✅ FÉLICITATIONS ! Votre inscription a été envoyée avec succès. Vous recevrez une confirmation sous 48h. Bienvenue à EDILPA !';
-retour.style.color = '#00ff00';
-document.getElementById('inscriptionForm').reset();
-} else {
-retour.innerHTML = '❌ Erreur lors de l\'envoi. Veuillez réessayer ou contacter le 509 3226 6392';
-retour.style.color = '#ff6600';
-}} catch(error) {
-retour.innerHTML = '❌ Problème de connexion. Appelez-nous au 509 3226 6392';
-retour.style.color = '#ff6600';
-}});
-</script>
+<div class="footer"><p>© 2025 - EDILPA</p></div>
 </body>
 </html>
