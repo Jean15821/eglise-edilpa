@@ -1,19 +1,86 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>EDILPA</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>EDILPA - Église de Dieu Liberté par la Parole</title>
 <style>
-body{background:#0a0a2a;color:white;font-family:sans-serif;display:flex;justify-content:center;align-items:center;height:100vh;text-align:center;margin:0}
+*{margin:0;padding:0;box-sizing:border-box}
+body{
+background:linear-gradient(135deg, #0a0a2a 0%, #1a1a4e 100%);
+color:white;
+font-family:system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+display:flex;
+justify-content:center;
+align-items:center;
+min-height:100vh;
+text-align:center;
+padding:20px
+}
+.card{
+background:rgba(255,255,255,0.05);
+backdrop-filter:blur(10px);
+border-radius:30px;
+padding:40px 30px;
+max-width:500px;
+width:100%;
+box-shadow:0 20px 40px rgba(0,0,0,0.3)
+}
+h1{
+color:#ffd700;
+font-size:28px;
+margin-bottom:15px;
+border-bottom:2px solid #ffd700;
+display:inline-block;
+padding-bottom:8px
+}
+h2{
+color:#ffd700;
+font-size:22px;
+margin:20px 0 10px
+}
+p{
+margin:12px 0;
+line-height:1.5;
+color:#e0e0e0
+}
+.contact{
+background:rgba(255,215,0,0.1);
+border-radius:20px;
+padding:15px;
+margin:20px 0
+}
+.contact p{margin:5px 0}
+.highlight{
+color:#ffd700;
+font-weight:bold;
+margin-top:20px;
+font-size:18px
+}
+hr{
+border-color:rgba(255,215,0,0.3);
+margin:15px 0
+}
 </style>
 </head>
 <body>
-<div>
-<h1 style="color:#ffd700">Église de Dieu Liberté par la Parole INC.</h1>
+<div class="card">
+<h1>Église de Dieu<br>Liberté par la Parole INC.</h1>
 <h2>EDILPA</h2>
-<p>Fondée en 1997 - Santo Domingo</p>
-<p>📞 509 3226 6392</p>
+<div class="contact">
+<p>📅 <strong>Fondée en 1997</strong> - Santo Domingo, République Dominicaine</p>
+<p>📍 Siège Haïti : Bas-Bourg de Mombin Crochu, Rue Poivre, Nord'Est</p>
+<p>📞 <strong>509 3226 6392</strong></p>
 <p>📧 jeancharies809@gmail.com</p>
-<p style="margin-top:30px">✅ Site prêt à être déployé</p>
+</div>
+<div class="highlight">
+✨ PROCHAINS ÉVÉNEMENTS ✨<br>
+<strong>Conférence Jeunesse 2026</strong><br>
+📅 28 Juin 2026 - 8h30<br>
+💰 2,500 Gdes
+</div>
+<hr>
+<p style="font-size:12px;opacity:0.7">Église de Dieu Liberté par la Parole INC. - Tous droits réservés</p>
 </div>
 </body>
 </html>
